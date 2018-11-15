@@ -1,6 +1,6 @@
 import React from 'react';
 import { Meteor } from 'meteor/meteor';
-import { Container, Header, Loader, Table, Image,List } from 'semantic-ui-react';
+import { Container, Header, Loader, Table, Image, List, Card } from 'semantic-ui-react';
 import { Stuffs } from '/imports/api/stuff/stuff';
 /** import StuffItem from '/imports/ui/components/StuffItem'; */
 import { withTracker } from 'meteor/react-meteor-data';
@@ -22,15 +22,15 @@ class ListStuff extends React.Component {
           <Table striped>
             <Table.Header>
             <Table.Row>
-              <Table.HeaderCell width='20%'><Image size='small' src="/images/meteor-logo.png"/></Table.HeaderCell>
-              <Table.HeaderCell>INFO</Table.HeaderCell>
+              <Table.HeaderCell>
+                <Image size='small' src="/images/meteor-logo.png"/>
+                <button className='ui button' role='button'>Edit</button>
+              </Table.HeaderCell>
+              <Table.HeaderCell width="80&"><Header as="h1" textAlign="center">INFO</Header></Table.HeaderCell>
             </Table.Row>
           </Table.Header>
             <Table.Body>
               <Table.Row>
-                <Table.Cell textAlign="top">
-                  Edit
-                </Table.Cell>
                 <Table.Cell>
                   <Header as="h1" textAlign="center">NAME: John Doe</Header>
                   <Header as="h2">Food Preference</Header>
@@ -39,6 +39,14 @@ class ListStuff extends React.Component {
                     <List.Item>Japanese</List.Item>
                   </List>
                 </Table.Cell>
+              </Table.Row>
+              <Table.Row>
+                <Container>
+                  <Header as="h2" textAlign="center">Saved Vendors</Header>
+                  <Card>
+                    Subway
+                  </Card>
+                </Container>
               </Table.Row>
           </Table.Body>
           </Table>
