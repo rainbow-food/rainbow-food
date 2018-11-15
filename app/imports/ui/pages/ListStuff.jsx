@@ -1,8 +1,8 @@
 import React from 'react';
 import { Meteor } from 'meteor/meteor';
-import { Container, Table, Header, Loader } from 'semantic-ui-react';
+import { Container, Header, Loader, Table, Image,List } from 'semantic-ui-react';
 import { Stuffs } from '/imports/api/stuff/stuff';
-import StuffItem from '/imports/ui/components/StuffItem';
+/** import StuffItem from '/imports/ui/components/StuffItem'; */
 import { withTracker } from 'meteor/react-meteor-data';
 import PropTypes from 'prop-types';
 
@@ -18,19 +18,29 @@ class ListStuff extends React.Component {
   renderPage() {
     return (
         <Container>
-          <Header as="h2" textAlign="center">List Stuff</Header>
-          <Table celled>
+          <Header as="h2" textAlign="center">Profile</Header>
+          <Table striped>
             <Table.Header>
-              <Table.Row>
-                <Table.HeaderCell>Name</Table.HeaderCell>
-                <Table.HeaderCell>Quantity</Table.HeaderCell>
-                <Table.HeaderCell>Condition</Table.HeaderCell>
-                <Table.HeaderCell>Edit</Table.HeaderCell>
-              </Table.Row>
-            </Table.Header>
+            <Table.Row>
+              <Table.HeaderCell width='20%'><Image size='small' src="/images/meteor-logo.png"/></Table.HeaderCell>
+              <Table.HeaderCell>INFO</Table.HeaderCell>
+            </Table.Row>
+          </Table.Header>
             <Table.Body>
-              {this.props.stuffs.map((stuff) => <StuffItem key={stuff._id} stuff={stuff} />)}
-            </Table.Body>
+              <Table.Row>
+                <Table.Cell textAlign="top">
+                  Edit
+                </Table.Cell>
+                <Table.Cell>
+                  <Header as="h1" textAlign="center">NAME: John Doe</Header>
+                  <Header as="h2">Food Preference</Header>
+                  <List>
+                    <List.Item>American</List.Item>
+                    <List.Item>Japanese</List.Item>
+                  </List>
+                </Table.Cell>
+              </Table.Row>
+          </Table.Body>
           </Table>
         </Container>
     );
