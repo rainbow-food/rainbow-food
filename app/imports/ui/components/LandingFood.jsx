@@ -8,7 +8,7 @@ export default class LandingFood extends React.Component {
         <div>
           <Grid>
             <Grid.Row>
-              <Grid columns={4} center container>
+              <Grid columns={4} centered container>
                 <Grid.Column>
                   <Image style={divStyle} src="/images/food1.jpg"/>
                   <br/>
