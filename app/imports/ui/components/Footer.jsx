@@ -6,7 +6,7 @@ import { Container, Image } from 'semantic-ui-react';
 class Footer extends React.Component {
 
   render() {
-    const footWidth = {width: "100%"};
+    const footWidth = {padding: '20px', width: "100%"};
     return (
         <Container style={footWidth}>
           <Image src="/images/rainbows.jpg" />
