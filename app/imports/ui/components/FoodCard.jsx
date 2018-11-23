@@ -4,8 +4,9 @@ import {Card, Image } from 'semantic-ui-react';
 
 class FoodCard extends React.Component {
   render() {
+    const cardStyle = { margin: '3em' };
     return (
-        <Card>
+        <Card style={cardStyle}>
           <Image src={this.props.image}/>
           <Card.Content>
             <Card.Header>{this.props.title}</Card.Header>
