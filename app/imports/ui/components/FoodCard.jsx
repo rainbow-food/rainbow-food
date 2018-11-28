@@ -5,6 +5,7 @@ import {Card, Image, Icon } from 'semantic-ui-react';
 class FoodCard extends React.Component {
   render() {
     const cardStyle = { margin: '3em' };
+    const starStyle = {color: 'red'};
     return (
         <Card style={cardStyle}>
           <Image src={this.props.image}/>
@@ -14,7 +15,7 @@ class FoodCard extends React.Component {
             <Card.Content description={this.props.description}/>
           </Card.Content>
           <Card.Content extra>
-            <Icon name='star'/>
+            <Icon name='star' style={starStyle}/>
             {this.props.numLikes} Likes
           </Card.Content>
         </Card>
