@@ -13,18 +13,21 @@ class TopPicks extends React.Component {
                   title={'Le Crêpe Café'}
                   hours={'Monday - Friday 8:00am - 5:00pm (Paradise Palms Café)'}
                   description={'Authentic Crepes '}
-              />
-              <FoodCard
-                  image={'https://s3.amazonaws.com/product-images.imshopping.com/nimblebuy/crepe-cafe-20-for-10-2-7164322-regular.jpg'}
-                  title={'Le Crêpe Café'}
-                  hours={'Monday - Friday 8:00am - 5:00pm (Paradise Palms Café)'}
-                  description={'Authentic Crepes '}
+                  numLikes={100}
               />
               <FoodCard
                   image={'https://s3-media4.fl.yelpcdn.com/bphoto/wxIyz_1YGvGPVILHCcfFnQ/o.jpg'}
                   title={'The Sistah'}
                   hours={'Holmes Hall 10:00am - 2:00pm (Monday, Wednesday, Friday), Center for Korean Studies 10:00am - 2:00pm (Tuesday, Thursday)'}
                   description={'Mushroom bowl'}
+                  numLikes={95}
+              />
+              <FoodCard
+                  image={'https://s3.amazonaws.com/product-images.imshopping.com/nimblebuy/crepe-cafe-20-for-10-2-7164322-regular.jpg'}
+                  title={'Le Crêpe Café'}
+                  hours={'Monday - Friday 8:00am - 5:00pm (Paradise Palms Café)'}
+                  description={'Authentic Crepes '}
+                  numLikes={78}
               />
             </Grid.Row>
           </Grid>
