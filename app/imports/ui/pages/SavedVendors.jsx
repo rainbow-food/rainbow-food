@@ -1,13 +1,13 @@
 import React from 'react';
 import { Meteor } from 'meteor/meteor';
-import { Container, Header, Loader, Table, Image, List, Card } from 'semantic-ui-react';
+import { Header, Loader } from 'semantic-ui-react';
 import { Stuffs } from '/imports/api/stuff/stuff';
 /** import StuffItem from '/imports/ui/components/StuffItem'; */
 import { withTracker } from 'meteor/react-meteor-data';
 import PropTypes from 'prop-types';
 
 /** Renders a table containing all of the Stuff documents. Use <StuffItem> to render each row. */
-class ListStuff extends React.Component {
+class SavedVendors extends React.Component {
 
   /** If the subscription(s) have been received, render the page, otherwise show a loading icon. */
   render() {
@@ -17,19 +17,14 @@ class ListStuff extends React.Component {
   /** Render the page once subscriptions have been received. */
   renderPage() {
     return (
-        <Container>
         <Header as="h2" textAlign="center" inverted>Saved Vendors</Header>
-    <Card.Group>
-      {this.props.contacts.map((contact, index) => <Contact key={index} contact={contact} />)}
-    </Card.Group>
-    </Container>
     );
   }
 }
 
 /** Require an array of Stuff documents in the props. */
-ListStuff.propTypes = {
-  stuffs: PropTypes.array.isRequired,
+SavedVendors.propTypes = {
+  stuff: PropTypes.array.isRequired,
   ready: PropTypes.bool.isRequired,
 };
 
@@ -41,4 +36,4 @@ export default withTracker(() => {
     stuffs: Stuffs.find({}).fetch(),
     ready: subscription.ready(),
   };
-})(ListStuff);
+})(SavedVendors);

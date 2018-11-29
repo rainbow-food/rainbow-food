@@ -1,6 +1,6 @@
 import React from 'react';
 import { Meteor } from 'meteor/meteor';
-import { Container, Header, Loader, Table, Image, List, Card } from 'semantic-ui-react';
+import { Container, Header, Loader, Table, List, Card } from 'semantic-ui-react';
 import { Stuffs } from '/imports/api/stuff/stuff';
 /** import StuffItem from '/imports/ui/components/StuffItem'; */
 import { withTracker } from 'meteor/react-meteor-data';
@@ -19,11 +19,10 @@ class Profile extends React.Component {
     return (
         <Container>
           <Header as="h2" textAlign="center">Profile</Header>
-          <Table striped>
+          <Table>
             <Table.Header>
             <Table.Row>
               <Table.HeaderCell>
-                <Image size='small' src="/images/meteor-logo.png"/>
                 <button className='ui button' role='button'>Edit</button>
               </Table.HeaderCell>
               <Table.HeaderCell width="80&"><Header as="h1" textAlign="center">INFO</Header></Table.HeaderCell>

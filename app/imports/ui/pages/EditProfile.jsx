@@ -12,7 +12,7 @@ import { withTracker } from 'meteor/react-meteor-data';
 import PropTypes from 'prop-types';
 
 /** Renders the Page for editing a single document. */
-class EditStuff extends React.Component {
+class EditProfile extends React.Component {
 
   /** On successful submit, insert the data. */
   submit(data) {
@@ -50,7 +50,7 @@ class EditStuff extends React.Component {
 }
 
 /** Require the presence of a Stuff document in the props object. Uniforms adds 'model' to the props, which we use. */
-EditStuff.propTypes = {
+EditProfile.propTypes = {
   doc: PropTypes.object,
   model: PropTypes.object,
   ready: PropTypes.bool.isRequired,
@@ -66,4 +66,4 @@ export default withTracker(({ match }) => {
     doc: Stuffs.findOne(documentId),
     ready: subscription.ready(),
   };
-})(EditStuff);
+})(EditProfile);
