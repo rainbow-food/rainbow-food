@@ -25,7 +25,6 @@ class Profile extends React.Component {
               <Table.HeaderCell>
                 <button className='ui button' role='button'>Edit</button>
               </Table.HeaderCell>
-              <Table.HeaderCell width="80&"><Header as="h1" textAlign="center">INFO</Header></Table.HeaderCell>
             </Table.Row>
           </Table.Header>
             <Table.Body>

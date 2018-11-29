@@ -1,6 +1,6 @@
 import React from 'react';
 import { Meteor } from 'meteor/meteor';
-import { Header, Loader } from 'semantic-ui-react';
+import { Card, Container, Header, Loader } from 'semantic-ui-react';
 import { Stuffs } from '/imports/api/stuff/stuff';
 /** import StuffItem from '/imports/ui/components/StuffItem'; */
 import { withTracker } from 'meteor/react-meteor-data';
@@ -17,7 +17,12 @@ class SavedVendors extends React.Component {
   /** Render the page once subscriptions have been received. */
   renderPage() {
     return (
-        <Header as="h2" textAlign="center" inverted>Saved Vendors</Header>
+        <Container>
+          <Header as="h2" textAlign="center">Saved Vendors</Header>
+          <Card>
+            Subway
+          </Card>
+        </Container>
     );
   }
 }
