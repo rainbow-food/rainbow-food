@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Header, Grid, Card, Image, Button } from 'semantic-ui-react';
+import { Container, Header, Grid, Card, Image } from 'semantic-ui-react';
 
 /** A simple static component to render some text for the landing page. */
 class AdminHomePage extends React.Component {
