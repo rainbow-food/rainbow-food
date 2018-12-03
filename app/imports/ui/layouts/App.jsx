@@ -7,17 +7,17 @@ import { HashRouter as Router, Route, Switch, Redirect } from 'react-router-dom'
 import NavBar from '../components/NavBar';
 import Footer from '../components/Footer';
 import Landing from '../pages/Landing';
-import ListStuff from '../pages/ListStuff';
 import ListStuffAdmin from '../pages/ListStuffAdmin';
 import AdminHomePage from '../pages/AdminHomePage';
-import AddStuff from '../pages/AddStuff';
-import EditStuff from '../pages/EditStuff';
 import NotFound from '../pages/NotFound';
 import Signin from '../pages/Signin';
 import Signup from '../pages/Signup';
 import Signout from '../pages/Signout';
 import FoodAvailable from '../pages/FoodsAvailable';
 import TopPicks from '../pages/TopPicks';
+import AddProfile from '../pages/AddProfile';
+import ListProfiles from '../pages/ListProfiles';
+import EditProfile from '../pages/EditProfile';
 
 /** Top-level layout component for this application. Called in imports/startup/client/startup.jsx. */
 class App extends React.Component {
@@ -32,11 +32,11 @@ class App extends React.Component {
               <Route path="/signup" component={Signup}/>
               <Route path="/foodavailable" component={FoodAvailable}/>
               <Route path="/toppicks" component={TopPicks}/>
-              <AdminProtectedRoute path="/adminhome" component={AdminHomePage} />
-              <ProtectedRoute path="/list" component={ListStuff}/>
-              <ProtectedRoute path="/add" component={AddStuff}/>
-              <ProtectedRoute path="/edit/:_id" component={EditStuff}/>
+              <ProtectedRoute path="/add" component={AddProfile}/>
+              <ProtectedRoute path="/listProfiles" component={ListProfiles}/>
+              <ProtectedRoute path="/editProfile/:_id" component={EditProfile}/>
               <AdminProtectedRoute path="/admin" component={ListStuffAdmin}/>
+              <AdminProtectedRoute path="/adminhome" component={AdminHomePage} />
               <ProtectedRoute path="/signout" component={Signout}/>
               <Route component={NotFound}/>
             </Switch>
