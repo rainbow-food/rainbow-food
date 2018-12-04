@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, Image, Feed } from 'semantic-ui-react';
+import { Card, Image, Grid } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
 import { withRouter, Link } from 'react-router-dom';
 
@@ -9,7 +9,7 @@ class Profile extends React.Component {
     return (
         <Card centered>
           <Card.Content>
-            <Image floated='right' size='mini' src={this.props.profile.image} />
+            <Image floated='left' rounded size='large' src={this.props.profile.image} />
             <Card.Header>{this.props.profile.firstName} {this.props.profile.lastName}</Card.Header>
             <Card.Meta>{this.props.profile.address}</Card.Meta>
             <Card.Description>
@@ -17,11 +17,7 @@ class Profile extends React.Component {
             </Card.Description>
           </Card.Content>
           <Card.Content extra>
-            <Link to={`/edit/${this.props.profile._id}`}>Edit</Link>
-          </Card.Content>
-
-          <Card.Content extra>
-            <AddNote owner={this.props.profile.owner} contactId={this.props.profile._id}/>
+            <Link to={`/editProfile/${this.props.profile._id}`}>Edit</Link>
           </Card.Content>
         </Card>
     );

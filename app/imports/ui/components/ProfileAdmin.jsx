@@ -9,7 +9,7 @@ class ProfileAdmin extends React.Component {
     return (
         <Card centered>
           <Card.Content>
-            <Image floated='right' size='mini' src={this.props.profile.image} />
+            <Image floated='left' rounded size='large' src={this.props.profile.image} />
             <Card.Header>{this.props.profile.firstName} {this.props.profile.lastName}</Card.Header>
             <Card.Meta>{this.props.profile.address}</Card.Meta>
             <Card.Description>

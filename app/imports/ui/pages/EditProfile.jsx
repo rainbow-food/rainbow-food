@@ -17,7 +17,7 @@ class EditProfile extends React.Component {
   /** On successful submit, insert the data. */
   submit(data) {
     const { firstName, lastName, image, address, description, _id } = data;
-    Contacts.update(_id, { $set: { firstName, lastName, image, address, description } }, (error) => (error ?
+    Profiles.update(_id, { $set: { firstName, lastName, image, address, description } }, (error) => (error ?
         Bert.alert({ type: 'danger', message: `Update failed: ${error.message}` }) :
         Bert.alert({ type: 'success', message: 'Update succeeded' })));
   }
