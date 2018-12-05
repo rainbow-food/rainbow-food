@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, Image } from 'semantic-ui-react';
+import { Card, Image, Icon } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
 import { withRouter, Link } from 'react-router-dom';
 /** Renders a single row in the List Stuff table. See pages/ListStuff.jsx. */
@@ -13,7 +13,7 @@ class Profile extends React.Component {
               {this.props.profile.firstName} {this.props.profile.lastName}
             </Card.Header>
             <Card.Meta>
-              {this.props.profile.favorite}
+              <Icon name='heart'/> {this.props.profile.favorite}
             </Card.Meta>
             <Card.Description>
               {this.props.profile.description}
