@@ -35,7 +35,7 @@ class EditProfile extends React.Component {
               <Segment>
                 <TextField name='firstName'/>
                 <TextField name='lastName'/>
-                <TextField name='address'/>
+                <TextField name='favorite'/>
                 <TextField name='image'/>
                 <LongTextField name='description'/>
                 <SubmitField value='Submit'/>

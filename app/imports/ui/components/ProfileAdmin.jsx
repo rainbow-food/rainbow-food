@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, Image } from 'semantic-ui-react';
+import { Card, Image, Icon } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
 import { withRouter } from 'react-router-dom';
 
@@ -11,7 +11,7 @@ class ProfileAdmin extends React.Component {
           <Card.Content>
             <Image floated='left' size='large' src={this.props.profile.image} />
             <Card.Header>{this.props.profile.firstName} {this.props.profile.lastName}</Card.Header>
-            <Card.Meta>{this.props.profile.address}</Card.Meta>
+            <Card.Meta><icon name='heart'/>{this.props.profile.favorite}</Card.Meta>
             <Card.Description>
               {this.props.profile.description}
             </Card.Description>

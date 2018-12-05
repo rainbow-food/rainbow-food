@@ -13,7 +13,7 @@ class Profile extends React.Component {
               {this.props.profile.firstName} {this.props.profile.lastName}
             </Card.Header>
             <Card.Meta>
-              {this.props.profile.address}
+              {this.props.profile.favorite}
             </Card.Meta>
             <Card.Description>
               {this.props.profile.description}

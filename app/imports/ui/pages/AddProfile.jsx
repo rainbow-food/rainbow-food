@@ -20,6 +20,7 @@ class AddProfile extends React.Component {
     this.insertCallback = this.insertCallback.bind(this);
     this.formRef = null;
   }
+
   /** Notify the user of the results of the submit. If successful, clear the form. */
   insertCallback(error) {
     if (error) {
@@ -29,12 +30,14 @@ class AddProfile extends React.Component {
       this.formRef.reset();
     }
   }
+
   /** On submit, insert the data. */
   submit(data) {
     const { firstName, lastName, address, image, description } = data;
     const owner = Meteor.user().username;
     Profiles.insert({ firstName, lastName, address, image, description, owner }, this.insertCallback);
   }
+
   /** Render the form. Use Uniforms: https://github.com/vazco/uniforms */
   render() {
     return (
@@ -45,7 +48,7 @@ class AddProfile extends React.Component {
               <Segment>
                 <TextField name='firstName'/>
                 <TextField name='lastName'/>
-                <TextField name='address'/>
+                <TextField name='favorite'/>
                 <TextField name='image'/>
                 <LongTextField name='description'/>
                 <SubmitField value='Submit'/>
@@ -58,4 +61,5 @@ class AddProfile extends React.Component {
     );
   }
 }
+
 export default AddProfile;
