@@ -10,8 +10,8 @@ import Landing from '../pages/Landing';
 import ListProfiles from '../pages/ListProfiles';
 import ListStuffAdmin from '../pages/ListStuffAdmin';
 import AdminHomePage from '../pages/AdminHomePage';
-import AddStuff from '../pages/AddStuff';
-import EditStuff from '../pages/EditStuff';
+import AddProfile from '../pages/AddProfile';
+import EditProfile from '../pages/EditProfile';
 import NotFound from '../pages/NotFound';
 import Signin from '../pages/Signin';
 import Signup from '../pages/Signup';
@@ -34,8 +34,8 @@ class App extends React.Component {
               <Route path="/toppicks" component={TopPicks}/>
               <AdminProtectedRoute path="/adminhome" component={AdminHomePage} />
               <ProtectedRoute path="/list" component={ListProfiles}/>
-              <ProtectedRoute path="/add" component={AddStuff}/>
-              <ProtectedRoute path="/edit/:_id" component={EditStuff}/>
+              <ProtectedRoute path="/add" component={AddProfile}/>
+              <ProtectedRoute path="/edit/:_id" component={EditProfile}/>
               <AdminProtectedRoute path="/admin" component={ListStuffAdmin}/>
               <ProtectedRoute path="/signout" component={Signout}/>
               <Route component={NotFound}/>
