@@ -18,7 +18,7 @@ class ListProfiles extends React.Component {
   renderPage() {
     return (
         <Container>
-          <Header as="h2" textAlign="center" inverted>Profiles</Header>
+          <Header as="h2" textAlign="center" inverted>List Profiles</Header>
           <Card.Group centered>
             {this.props.profiles.map((profile, index) => <Profile key={index} profile={profile}/>)}
           </Card.Group>
@@ -36,7 +36,7 @@ ListProfiles.propTypes = {
 /** withTracker connects Meteor data to React components. https://guide.meteor.com/react.html#using-withTracker */
 export default withTracker(() => {
   // Get access to Stuff documents.
-  const subscription = Meteor.subscribe('Profile');
+  const subscription = Meteor.subscribe('Profiles');
   return {
     profiles: Profiles.find({}).fetch(),
     ready: subscription.ready(),

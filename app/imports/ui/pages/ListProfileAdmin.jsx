@@ -18,7 +18,7 @@ class ListProfileAdmin extends React.Component {
   renderPage() {
     return (
         <Container>
-          <Header as="h2" textAlign="center" inverted>Profile List</Header>
+          <Header as="h2" textAlign="center" inverted>List Profiles</Header>
           <Card.Group>
             {this.props.profiles.map((profile, index) => <ProfileAdmin key={index} profile={profile}/>)}
           </Card.Group>
