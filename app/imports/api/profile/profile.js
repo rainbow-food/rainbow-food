@@ -9,12 +9,7 @@ const Profiles = new Mongo.Collection('Profiles');
 const ProfileSchema = new SimpleSchema({
   firstName: String,
   lastName: String,
-  favorite: {
-    type: String,
-    allowedValues:['Da Spot', 'Dunkin Donuts', 'Govinda s', 'Holoholo Grill', 'Hot Tacos', 'Kamitoku Ramen',
-      'L&L Hawaiian Barbecue', 'Lasoon', 'Le Crêpe Café', 'Panda Express', 'Peace Cafe', 'Punchbowl', 'Sistah Truck',
-      'The Bean Counter' ],
-  },
+  favorite: String,
   image: String,
   description: String,
   owner: String,

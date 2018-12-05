@@ -16,8 +16,8 @@ import PropTypes from 'prop-types';
 class EditProfile extends React.Component {
   /** On successful submit, insert the data. */
   submit(data) {
-    const { firstName, lastName, image, address, description, _id } = data;
-    Profiles.update(_id, { $set: { firstName, lastName, image, address, description } }, (error) => (error ?
+    const { firstName, lastName, image, favorite, description, _id } = data;
+    Profiles.update(_id, { $set: { firstName, lastName, image, favorite, description } }, (error) => (error ?
         Bert.alert({ type: 'danger', message: `Update failed: ${error.message}` }) :
         Bert.alert({ type: 'success', message: 'Update succeeded' })));
   }
