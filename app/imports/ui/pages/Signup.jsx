@@ -37,7 +37,7 @@ export default class Signup extends React.Component {
   /** Display the signup form. */
   render() {
     return (
-        <Container>
+        <Container style={{height: '500px'}}>
           <Grid textAlign="center" verticalAlign="middle" centered columns={2}>
             <Grid.Column>
               <Header as="h2" textAlign="center" inverted>
