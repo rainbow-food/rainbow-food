@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, Image, Icon } from 'semantic-ui-react';
+import { Card, Image, Icon, Segment } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
 import { withRouter, Link } from 'react-router-dom';
 /** Renders a single row in the List Stuff table. See pages/ListStuff.jsx. */
@@ -20,7 +20,14 @@ class Profile extends React.Component {
             </Card.Description>
           </Card.Content>
           <Card.Content extra>
-            <Link to={`/edit/${this.props.profile._id}`}>Edit</Link>
+            <Segment.Group horizontal>
+              <Segment textAlign='center'>
+                <Link to={`/edit/${this.props.profile._id}`}>Edit </Link>
+              </Segment>
+              <Segment textAlign='center'>
+                <Link to={`/delete/${this.props.profile._id}`}>Delete</Link>
+              </Segment>
+            </Segment.Group>
           </Card.Content>
         </Card>
     );

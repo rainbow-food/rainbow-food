@@ -8,8 +8,7 @@ import NavBar from '../components/NavBar';
 import Footer from '../components/Footer';
 import Landing from '../pages/Landing';
 import ListProfiles from '../pages/ListProfiles';
-import ListStuffAdmin from '../pages/ListStuffAdmin';
-import AdminHomePage from '../pages/AdminHomePage';
+import ListProfilesAdmin from '../pages/ListProfilesAdmin';
 import AddProfile from '../pages/AddProfile';
 import EditProfile from '../pages/EditProfile';
 import NotFound from '../pages/NotFound';
@@ -32,11 +31,10 @@ class App extends React.Component {
               <Route path="/signup" component={Signup}/>
               <Route path="/foodavailable" component={FoodAvailable}/>
               <Route path="/toppicks" component={TopPicks}/>
-              <AdminProtectedRoute path="/adminhome" component={AdminHomePage} />
               <ProtectedRoute path="/list" component={ListProfiles}/>
               <ProtectedRoute path="/add" component={AddProfile}/>
               <ProtectedRoute path="/edit/:_id" component={EditProfile}/>
-              <AdminProtectedRoute path="/admin" component={ListStuffAdmin}/>
+              <AdminProtectedRoute path="/admin" component={ListProfilesAdmin}/>
               <ProtectedRoute path="/signout" component={Signout}/>
               <Route component={NotFound}/>
             </Switch>
