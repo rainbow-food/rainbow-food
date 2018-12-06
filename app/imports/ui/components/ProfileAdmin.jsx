@@ -23,9 +23,11 @@ class ProfileAdmin extends React.Component {
     );
   }
 }
+
 /** Require a document to be passed to this component. */
 ProfileAdmin.propTypes = {
   profile: PropTypes.object.isRequired,
 };
+
 /** Wrap this component in withRouter since we use the <Link> React Router element. */
 export default withRouter(ProfileAdmin);

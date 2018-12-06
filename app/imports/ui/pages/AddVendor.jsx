@@ -1,9 +1,9 @@
 import React from 'react';
-import { Stuffs, StuffSchema } from '/imports/api/stuff/stuff';
+import { Vendors, VendorSchema } from '/imports/api/vendor/vendor';
 import { Grid, Segment, Header } from 'semantic-ui-react';
 import AutoForm from 'uniforms-semantic/AutoForm';
 import TextField from 'uniforms-semantic/TextField';
-import Link from 'uniforms-semantic/Link';
+import LongTextField from 'uniforms-semantic/LongTextField';
 import SubmitField from 'uniforms-semantic/SubmitField';
 import HiddenField from 'uniforms-semantic/HiddenField';
 import ErrorsField from 'uniforms-semantic/ErrorsField';
@@ -33,9 +33,9 @@ class AddVendor extends React.Component {
 
   /** On submit, insert the data. */
   submit(data) {
-    const { name, hours, location, description, more } = data;
+    const { name, image, hours, location, description, more } = data;
     const owner = Meteor.user().username;
-    Stuffs.insert({ name, hours, description, location, more, owner }, this.insertCallback);
+    Vendors.insert({ name, image, hours, location, description, more, owner }, this.insertCallback);
   }
 
   /** Render the form. Use Uniforms: https://github.com/vazco/uniforms */
@@ -43,14 +43,15 @@ class AddVendor extends React.Component {
     return (
         <Grid container centered>
           <Grid.Column>
-            <Header as="h2" textAlign="center">Add Stuff</Header>
-            <AutoForm ref={(ref) => { this.formRef = ref; }} schema={StuffSchema} onSubmit={this.submit}>
+            <Header as="h2" textAlign="center" inverted>Add Vendor</Header>
+            <AutoForm ref={(ref) => { this.formRef = ref; }} schema={VendorSchema} onSubmit={this.submit}>
               <Segment>
-                <TextField name='name'/>
-                <TextField name='hours'/>
-                <TextField name='location'/>
-                <TextField name='description'/>
-                <Link name='more'/>
+                <TextField name='name' placeholder='Vendor name...'/>
+                <TextField name='image' placeholder='Vendor image address...'/>
+                <TextField name='hours' placeholder='Vendor hours...'/>
+                <TextField name='location' placeholder='Vendor location...'/>
+                <LongTextField name='description' placeholder='Vendor description...'/>
+                <TextField name='more' placeholder='Vendor menu link...'/>
                 <SubmitField value='Submit'/>
                 <ErrorsField/>
                 <HiddenField name='owner' value='fakeuser@foo.com'/>

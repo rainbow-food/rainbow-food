@@ -20,7 +20,7 @@ class ListVendorsAdmin extends React.Component {
         <Container>
           <Header as="h2" textAlign="center" inverted>Vendor</Header>
           <Card.Group>
-            {this.props.vendors.map((vendor, index) => <VendorsAdmin key={index} vendor={vendor}/>)}
+            {this.props.vendors.map((vendor, index) => <VendorAdmin key={index} vendor={vendor}/>)}
           </Card.Group>
         </Container>
     );

@@ -1,21 +1,31 @@
 import React from 'react';
-import { Card } from 'semantic-ui-react';
+import { Card, Segment } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
 import { withRouter, Link } from 'react-router-dom';
+
 /** Renders a single row in the List Stuff table. See pages/ListStuff.jsx. */
 class Vendor extends React.Component {
   render() {
     return (
         <Card centered>
-            <Card.Header>
-              {this.props.vendor.name}
-            </Card.Header>
+          <Card.Header>{this.props.vendor.name}</Card.Header>
+          <Image floated='left' size='large' src={this.props.vendor.image}/>
           <Card.Meta>{this.props.vendor.hours}</Card.Meta>
           <Card.Meta>{this.props.vendor.location}</Card.Meta>
-            <Card.Description>
-              {this.props.vendor.description}
-            </Card.Description>
-          <Link to={this.props.vendor.more}>more info</Link>
+          <Card.Description>{this.props.vendor.description}</Card.Description>
+          <Card.Meta>
+            <a href={this.props.vendor.menu}>more info</a>
+          </Card.Meta>
+          <Card.Content extra>
+            <Segment.Group horizontal>
+              <Segment textAlign='center'>
+                <Link to={`/edit/${this.props.vendor._id}`}>Edit </Link>
+              </Segment>
+              <Segment textAlign='center'>
+                <Link to={`/delete/${this.props.vendor._id}`}>Delete</Link>
+              </Segment>
+            </Segment.Group>
+          </Card.Content>
         </Card>
     );
   }

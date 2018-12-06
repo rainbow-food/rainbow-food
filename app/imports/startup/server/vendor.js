@@ -11,13 +11,13 @@ function addData(data) {
 /** Initialize the collection if empty. */
 if (Vendors.find().count() === 0) {
   if (Meteor.settings.defaultVendors) {
-    console.log('Creating default data.');
+    console.log('Creating default vendors.');
     Meteor.settings.defaultVendors.map(data => addData(data));
   }
 }
 
 /** This subscription publishes only the documents associated with the logged in user */
-Meteor.publish('Vendor', function publish() {
+Meteor.publish('Vendors', function publish() {
   if (this.userId) {
     const username = Meteor.users.findOne(this.userId).username;
     return Vendors.find({ owner: username });
@@ -26,7 +26,7 @@ Meteor.publish('Vendor', function publish() {
 });
 
 /** This subscription publishes all documents regardless of user, but only if the logged in user is the Admin. */
-Meteor.publish('VendorAdmin', function publish() {
+Meteor.publish('VendorsAdmin', function publish() {
   if (this.userId && Roles.userIsInRole(this.userId, 'admin')) {
     return Vendors.find();
   }
