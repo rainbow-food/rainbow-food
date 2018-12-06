@@ -1,6 +1,7 @@
 {
   "defaultAccounts": [
     { "email": "admin@foo.com", "password": "changeme", "role": "admin" },
+    { "email": "vendor@foo.com", "password": "changeme", "role": "vendor" },
     { "email": "john@foo.com", "password": "changeme" }
   ],
 
@@ -19,6 +20,17 @@
       "image": "https://philipmjohnson.github.io/images/philip2.jpeg",
       "owner": "john@foo.com",
       "description": "I am a Professor of Information and Computer Sciences at the University of Hawaii, Director of the Collaborative Software Development Laboratory, and the CEO of OpenPowerQuality.com."
+    }
+  ],
+
+  "defaultVendors": [
+    {
+      "name": "Da Spot",
+      "hours": "M-F 10:00am - 2:00pm",
+      "location": "Sustainability Courtyard & Saunders Hall (2 locations)",
+      "more": "http://manoa.hawaii.edu/food/daSpot.php",
+      "owner": "vendor@foo.com",
+      "description": "Da Spot Health Foods & Juices offers diverse, healthy and affordable cuisine with a unique take on tasty dishes from around the world. Da Spot specializes in Mediterranean and North African food with vegan and specialty meat options that can be certified halal or kosher. Offering imaginative cuisine in exotic styles of Egyptian, Greek, French, Italian, Indian, Thai, Malaysian, Ethiopian, American, Hawaiian, Japanese, Chinese, Korean, Pacific Rim and fusion cooking. Da Spot's menu also features over 15 combinations of different fruit smoothies."
     }
   ]
 }
