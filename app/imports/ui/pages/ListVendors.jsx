@@ -17,7 +17,7 @@ class ListVendors extends React.Component {
   /** Render the page once subscriptions have been received. */
   renderPage() {
     return (
-        <Container style={{height: '500px'}}>
+        <Container style={{height: '600px'}}>
           <Header as="h2" textAlign="center" inverted>List Vendors</Header>
           <Card.Group>
             {this.props.vendors.map((vendor, index) => <Vendor key={index} vendor={vendor}/>)}

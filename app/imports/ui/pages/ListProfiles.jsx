@@ -16,7 +16,7 @@ class ListProfiles extends React.Component {
   /** Render the page once subscriptions have been received. */
   renderPage() {
     return (
-        <Container style={{height: '500px'}}>
+        <Container style={{height: '600px'}}>
           <Header as="h2" textAlign="center" inverted>Profile</Header>
           <Card.Group>
             {this.props.profiles.map((profile, index) => <Profile key={index} profile={profile}/>)}
