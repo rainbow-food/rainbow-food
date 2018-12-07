@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, Segment } from 'semantic-ui-react';
+import { Card, Segment, Image } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
 import { withRouter, Link } from 'react-router-dom';
 
